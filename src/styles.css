@@ -1,0 +1,60 @@
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f9f9f9;
+    font-family: sans-serif;
+  }
+  
+  .otp-inputs-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    width: 45px;
+    height: 55px;
+    font-size: 1.5rem;
+    text-align: center;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s ease-in-out;
+  }
+  
+  input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 5px rgba(79, 70, 229, 0.4);
+  }
+  
+  .otp-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .otp-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4f46e5;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .otp-buttons button:hover {
+    background-color: #3730a3;
+  }
+  
+  .otp-buttons button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+  }
+  
