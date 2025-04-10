@@ -8,12 +8,25 @@
     background: #f9f9f9;
     font-family: sans-serif;
   }
-  
+  .formOtp{
+    border: 2px solid gray;
+    height: 40vh;
+    width: 75vh;
+    align-items: center;
+    box-shadow: #bbb;
+
+  }
+  article{
+    text-align: center;
+    font-size: large;
+  }
   .otp-inputs-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 12px;
     margin-bottom: 20px;
+    padding-top: 20px;
   }
   
   input {

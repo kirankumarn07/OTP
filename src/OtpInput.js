@@ -86,14 +86,14 @@ const OtpInput = ({ size = 6, onSubmit }) => {
         onSubmit?.(otp);
         alert("successfully submitted....")
         setInputValues(new Array(size).fill(""));
-      };
-      
-      const handleCancel = () => {
+    };
+
+    const handleCancel = () => {
         setInputValues(new Array(size).fill(""));
         // Optional: Focus back on first input
         document.getElementById("0")?.focus();
-      };
-      
+    };
+
     useEffect(() => {
         var isValid = true
         inputValues.forEach((inputValue) => {
@@ -103,20 +103,23 @@ const OtpInput = ({ size = 6, onSubmit }) => {
     }, [inputValues])
     return (
         <div className='container'>
-            <div className='otp-inputs-container'>
-                {inputValues.map((inputValue, index) => {
-                    return <input key={index.toString()} value={inputValue}
-                        id={index.toString()}
-                        onKeyUp={onKeyUp}
-                        maxLength={1}
-                    />
-                })
-                }
-            </div><br/>
-            <div className="otp-buttons">
-    <button onClick={handleSubmit} disabled={inputValues.includes("")}>Submit</button>
-    <button onClick={handleCancel}>Cancel</button>
-  </div>
+            <div className='formOtp'>
+                
+                <div className='otp-inputs-container'>
+                    {inputValues.map((inputValue, index) => {
+                        return <input key={index.toString()} value={inputValue}
+                            id={index.toString()}
+                            onKeyUp={onKeyUp}
+                            maxLength={1}
+                        />
+                    })
+                    }
+                </div><br />
+                <div className="otp-buttons">
+                    <button onClick={handleSubmit} disabled={inputValues.includes("")}>Submit</button>
+                    <button onClick={handleCancel}>Cancel</button>
+                </div>
+            </div>
         </div>
     )
 }
